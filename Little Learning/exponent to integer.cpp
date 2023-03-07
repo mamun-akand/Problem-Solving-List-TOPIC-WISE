@@ -2,6 +2,6 @@
 using namespace std;
 
 int main(){
-    cout << (int)1e6 << endl;
+    cout << (long long int)1e11 << endl;
     cout << pow(10, 6) << endl;
 }

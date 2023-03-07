@@ -17,7 +17,7 @@ int main(){
 
     /// vec.insert()
 
-        vec.insert(it, 999);
+        vec1.insert(it, 999);
         cout << *it << endl;
 
 //    vec.insert(vec.begin(), -1);

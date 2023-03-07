@@ -8,7 +8,7 @@ int main(){
     int s=3; int *ptr;
 
     for(int i=0; i<5; i++){
-        if(a[i]==s) *ptr = a[i];
+        if(a[i]==s) *ptr = &a[i];
     }
 
     cout << ptr << " " << (*ptr) << endl;   //ptr address, *ptr value

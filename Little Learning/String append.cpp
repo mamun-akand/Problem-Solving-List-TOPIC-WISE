@@ -8,5 +8,4 @@ int main(){
     s1.append(s2);
 
     cout << s1;
-
 }

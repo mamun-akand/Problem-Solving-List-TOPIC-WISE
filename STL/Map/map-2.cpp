@@ -17,6 +17,10 @@ int main(){
 //        cout << (*it).first << " " << it->second << endl;
 //    }
 
+    auto itt = mp.find("Riyad");
+
+    if(itt != mp.end()) cout << "Found" << endl;
+
     for(auto it : mp){
         cout << it.first << " " << it.second << endl;
     }

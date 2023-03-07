@@ -27,7 +27,7 @@ int main(){
     a[2] = {"Mamuns", 3};
 
 //    swap(a[0], a[2]);
-//    sort(a, a+3, compare.second);
+    sort(a, a+3, compare.second);
 
 //    for(int i=0; i<3; i++){
 //        cout << a[i].first << " " << a[i].second << endl;

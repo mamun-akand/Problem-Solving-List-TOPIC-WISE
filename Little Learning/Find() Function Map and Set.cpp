@@ -6,8 +6,8 @@ int main(){
 
     ///In the same way it works for map.
 
-    set <ll> mp={1,2,3,5};
-
+    set <ll> mp={1,10,3,5};
+//
 //    auto pos = mp.find(2);
 //
 //    for(auto it = pos; it!=mp.end(); it++){
@@ -16,7 +16,7 @@ int main(){
 
     ///Number not present
 
-    auto pos = mp.find(4);
+    auto pos = mp.find(10);
 
     if(pos != mp.end()) cout << *pos << endl;
     else cout << "Not Found" << endl;

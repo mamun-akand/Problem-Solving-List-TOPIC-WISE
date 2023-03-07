@@ -9,11 +9,11 @@ struct info{
 
 int main(){
 
-    struct info per1;
-    struct info per2;
+    info per1;
+    info per2;
 
     //person input
-    gets(per1.name);
+    cin >> per1.name;
     cin >> per1.age
         >> per1.salary;
 

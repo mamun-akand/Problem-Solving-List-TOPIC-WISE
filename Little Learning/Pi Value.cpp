@@ -5,19 +5,19 @@ int main(){
 
     //printing pi values up to N decimal places.
 
-    int N;
-    cin >> N;
+//    int N;
+//    cin >> N;
+//
+//    double pi = acos(-1);
+//    printf("%.*lf\n", N, pi);
 
-    double pi = acos(-1);
-    printf("%.*lf\n", N, pi);
 
-
-    //Using M_PI Function.
-    printf("%.*lf\n", 50, M_PI*10*10);
-
+//    //Using M_PI Function.
+//    printf("%.*lf\n", 50, M_PI*10*10);
+//
     //Using cout
-    cout << setprecision(N) << fixed;
-    cout << M_PI*10*10 << endl;
+    cout << setprecision(20) << fixed;
+    cout << M_PI << endl;
 
     return 0;
 
