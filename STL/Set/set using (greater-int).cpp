@@ -6,9 +6,13 @@ using namespace std;
 #define   ll   long long int
 #define   ld 	long double	
 #define   vll	vector <ll>	
+#define   vld	vector <ld>
+#define   mp	map <ll,ll>
+#define   st	set <ll>
 
 //FUNCTIONS
 #define   FAST    ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define   pi      3.1415926535897932384626433832795
 #define   all(v)  v.begin(),v.end()
 #define   setp(n) fixed << setprecision(n)
 #define   endl    "\n"
@@ -29,13 +33,15 @@ using namespace std;
 #define   SpicyWings  return 0;
 
 #define   vp(v)   for(auto it:v){cout << it <<" ";}
-#define   sp(s)   while(!s.empty()){cout<<s.front() <<" ";s.pop();}
+#define   sp(s)   while(!s.empty()){cout << s.front() << " "; s.pop();}
+// void vp(vector<ll> &v){for(auto it:v){cout << it <<" ";}}
 //=================================================================
 
 int main(){
    FAST;
     
-   // Test{}
+   set<int, greater<int>()> s{1,2,3};
+   vp(s);
    
    SpicyWings;
 }

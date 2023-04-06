@@ -25,7 +25,7 @@ using namespace std;
 #define   py      cout<<"YES"<<endl
 #define   pn      cout<<"NO"<<endl
 
-#define   Test    ll tc; cin>>tc; f1(t,tc)
+#define   Test    ll tc; cin>>tc; cin.ignore(); f1(t,tc)
 #define   cs      cout << "Case " << t << ": ";
 
 #define   f0(i,e)   for(ll i=0; i<e; i++)
@@ -34,50 +34,18 @@ using namespace std;
 void vp(vector<ll> &v){for(auto it:v){cout << it <<" ";}}
 //=================================================================
 
-// bool cmp(pair<ll,ll>a, pair<ll,ll>b){
-   // return a.second > b.second;
-// }
-
-bool cmp(pair<int, int>a, pair<int, int>b)
-{
-   return a.second < b.second;
-}
-
 int main(){
-
-      map<int, int> m={{2,3}, {3,4},{5,2}};
-      
-      for(auto it:m){
-         cout << it.first << " " << it.second << endl;
-      }
+   FAST;
+    
+   map<ll, ll> m;
+   m[2]=3;
+   m[3]=4;
+   m[4]=5;
    
-      /*int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Max map value: " << max_mapval << endl;*/
-      
-      int max_key = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Key-Max Map Value: " << max_key << endl;
-      
-      // //This is how it works. another way.
-      // auto maxx = max_element(m.begin(), m.end(), cmp);
-      // cout << maxx->second << endl
-           // << maxx->first << endl;
-      
+   //Find in map/set O(log n), in vector O(n).
+   
+   auto it = m.find(3); 
+   cout << (*it).first << " " << (*it).second << endl;
+   
    SpicyWings;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

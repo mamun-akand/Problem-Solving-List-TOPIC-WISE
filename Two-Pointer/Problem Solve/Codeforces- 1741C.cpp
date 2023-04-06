@@ -1,3 +1,5 @@
+// URL: https://codeforces.com/problemset/problem/1741/C
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -35,7 +37,33 @@ using namespace std;
 int main(){
    FAST;
     
-   // Test{}
+   Test{
+      ll n; cin>>n;
+      vll v(n); for(auto &it:v) cin>>it;
+      
+      ll sum=0, ans = LLONG_MAX;
+      for(ll i=0; i<n; i++) {
+         sum += v[i];
+         
+         ll L=i+1, tempSum=0, tempCnt=i+1, flag=0;
+         for(ll R=i+1; R<n; R++){
+            tempSum += v[R];
+            if(tempSum == sum){
+               ll cnt = (R-L)+1;
+               tempCnt = max(cnt, tempCnt);
+               tempSum = 0;
+               L = R+1;
+               if(R == n-1) flag=1;
+            }
+            else if(tempSum > sum){
+               break;  
+            }
+         }
+         if(flag) ans = min(ans, tempCnt);
+      }
+      if(ans != LLONG_MAX) cout << ans << endl;
+      else cout << v.size() << endl; 
+  }
    
    SpicyWings;
 }

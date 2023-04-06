@@ -1,3 +1,5 @@
+// URL: https://codeforces.com/problemset/problem/1656/B
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -25,7 +27,7 @@ using namespace std;
 #define   py      cout<<"YES"<<endl
 #define   pn      cout<<"NO"<<endl
 
-#define   Test    ll tc; cin>>tc; f1(t,tc)
+#define   Test    ll tc; cin>>tc; cin.ignore(); f1(t,tc)
 #define   cs      cout << "Case " << t << ": ";
 
 #define   f0(i,e)   for(ll i=0; i<e; i++)
@@ -34,50 +36,25 @@ using namespace std;
 void vp(vector<ll> &v){for(auto it:v){cout << it <<" ";}}
 //=================================================================
 
-// bool cmp(pair<ll,ll>a, pair<ll,ll>b){
-   // return a.second > b.second;
-// }
-
-bool cmp(pair<int, int>a, pair<int, int>b)
-{
-   return a.second < b.second;
-}
-
 int main(){
-
-      map<int, int> m={{2,3}, {3,4},{5,2}};
-      
-      for(auto it:m){
-         cout << it.first << " " << it.second << endl;
-      }
+   FAST;
    
-      /*int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Max map value: " << max_mapval << endl;*/
+   Test{
+      ll n, k; cin>>n>>k;
+      vll v(n); for(auto &it:v) cin>>it;
+      sort(all(v));
       
-      int max_key = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Key-Max Map Value: " << max_key << endl;
-      
-      // //This is how it works. another way.
-      // auto maxx = max_element(m.begin(), m.end(), cmp);
-      // cout << maxx->second << endl
-           // << maxx->first << endl;
-      
+      ll L=0, R=1, Flag=0;
+      while(L<n && R<n){
+         if(k+v[L] == v[R]){
+            Flag=1; break;
+         }
+         else if(k+v[L] > v[R]) R++;
+         else L++;
+      }
+      if(Flag) py;
+      else pn;
+   }
+   
    SpicyWings;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,3 +1,5 @@
+// URL: https://codeforces.com/problemset/problem/1547/C
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -25,7 +27,7 @@ using namespace std;
 #define   py      cout<<"YES"<<endl
 #define   pn      cout<<"NO"<<endl
 
-#define   Test    ll tc; cin>>tc; f1(t,tc)
+#define   Test    ll tc; cin>>tc; cin.ignore(); f1(t,tc)
 #define   cs      cout << "Case " << t << ": ";
 
 #define   f0(i,e)   for(ll i=0; i<e; i++)
@@ -34,50 +36,51 @@ using namespace std;
 void vp(vector<ll> &v){for(auto it:v){cout << it <<" ";}}
 //=================================================================
 
-// bool cmp(pair<ll,ll>a, pair<ll,ll>b){
-   // return a.second > b.second;
-// }
-
-bool cmp(pair<int, int>a, pair<int, int>b)
-{
-   return a.second < b.second;
-}
-
 int main(){
-
-      map<int, int> m={{2,3}, {3,4},{5,2}};
+   FAST;
+    
+   Test{
+      ll k, n, m; cin>>k>>n>>m;
       
-      for(auto it:m){
-         cout << it.first << " " << it.second << endl;
+      vll v1(n), v2(m), final;
+      for(auto &it:v1) cin >> it;
+      for(auto &it:v2) cin >> it;
+      
+      ll LN=0, LM=0, flag=1;;
+      while(LN<n || LM<m){
+         ll mn;
+         
+         if(LN >= n){
+            mn = v2[LM];
+            LM++;
+         }
+         else if(LM >= m){  
+            mn = v1[LN];
+            LN++;
+         }
+         else if(v1[LN] < v2[LM]){
+            mn = v1[LN];
+            LN++;
+         }
+         else{
+            mn = v2[LM];
+            LM++;
+         }
+         
+         if(mn <= k) final.pb(mn);
+         else{
+            flag=0;
+            cout << -1 << endl;
+            break;
+         }
+         
+         if(mn==0) k++; 
       }
+      
+      if(flag==1) {
+         vp(final); ln;
+      }
+   }
    
-      /*int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Max map value: " << max_mapval << endl;*/
-      
-      int max_key = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Key-Max Map Value: " << max_key << endl;
-      
-      // //This is how it works. another way.
-      // auto maxx = max_element(m.begin(), m.end(), cmp);
-      // cout << maxx->second << endl
-           // << maxx->first << endl;
-      
    SpicyWings;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

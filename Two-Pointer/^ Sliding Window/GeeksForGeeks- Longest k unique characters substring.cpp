@@ -1,3 +1,5 @@
+//https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -32,10 +34,35 @@ using namespace std;
 #define   sp(s)   while(!s.empty()){cout<<s.front() <<" ";s.pop();}
 //=================================================================
 
-int main(){
-   FAST;
-    
-   // Test{}
+   int longestKSubstr(string s, int k) {
+        map<char, int> mp;
+        int L=0, ans=INT_MIN;
+        for(int R=0; R<s.size(); R++){
+            mp[s[R]]++;
+            if(mp.size()==k){
+                ans = max(ans, R-L+1);
+            }
+            if(mp.size()<=k) continue;
+            else{
+                mp[s[L]]--;
+                if(mp[s[L]]==0){
+                    mp.erase(s[L]);
+                }
+                L++;
+            }
+        }
+        if(ans == INT_MIN) return -1;
+        else return ans;
+   }
    
-   SpicyWings;
-}
+   int main(){
+      FAST;
+      
+      string s="aaaa";
+      int k=2;
+      
+      int x = longestKSubstr(s, k);
+      cout << x << endl;
+      
+      SpicyWings;
+   }

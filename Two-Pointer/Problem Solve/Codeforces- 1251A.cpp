@@ -1,3 +1,8 @@
+// Problem: A. Broken Keyboard
+// URL: https://codeforces.com/contest/1251/problem/A
+// Memory Limit: 256 MB
+// Time Limit: 1000 ms
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -25,7 +30,7 @@ using namespace std;
 #define   py      cout<<"YES"<<endl
 #define   pn      cout<<"NO"<<endl
 
-#define   Test    ll tc; cin>>tc; f1(t,tc)
+#define   Test    ll tc; cin>>tc; cin.ignore(); f1(t,tc)
 #define   cs      cout << "Case " << t << ": ";
 
 #define   f0(i,e)   for(ll i=0; i<e; i++)
@@ -34,50 +39,31 @@ using namespace std;
 void vp(vector<ll> &v){for(auto it:v){cout << it <<" ";}}
 //=================================================================
 
-// bool cmp(pair<ll,ll>a, pair<ll,ll>b){
-   // return a.second > b.second;
-// }
-
-bool cmp(pair<int, int>a, pair<int, int>b)
-{
-   return a.second < b.second;
-}
-
 int main(){
-
-      map<int, int> m={{2,3}, {3,4},{5,2}};
+   FAST;
+    
+   Test{
+      vector<bool> v(26,0);
+      string s; cin>>s;
       
-      for(auto it:m){
-         cout << it.first << " " << it.second << endl;
+      int point=0;
+      int cnt=0;
+      for(int i=0; i<s.size(); i++){
+         if(s[point]==s[i]) cnt++;
+         else{
+            if(cnt%2==1) v[s[point]-'a'] = 1;
+            // cout << cnt << endl;
+            point=i;
+            cnt=1;
+         }
       }
+      if(cnt%2==1) v[s[point]-'a'] = 1;
+      
+      for(ll i=0; i<26; i++){
+         if(v[i]==1) cout << char(i+'a');
+      }
+      ln;
+   }
    
-      /*int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Max map value: " << max_mapval << endl;*/
-      
-      int max_key = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Key-Max Map Value: " << max_key << endl;
-      
-      // //This is how it works. another way.
-      // auto maxx = max_element(m.begin(), m.end(), cmp);
-      // cout << maxx->second << endl
-           // << maxx->first << endl;
-      
    SpicyWings;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

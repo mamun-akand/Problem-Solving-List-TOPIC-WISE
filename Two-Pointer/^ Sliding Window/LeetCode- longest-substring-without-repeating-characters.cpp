@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/928957970/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -32,10 +34,31 @@ using namespace std;
 #define   sp(s)   while(!s.empty()){cout<<s.front() <<" ";s.pop();}
 //=================================================================
 
-int main(){
-   FAST;
-    
-   // Test{}
+   int longestKSubstr(string s) {
+        map<char, int> mp;
+        int L=0, ans=INT_MIN;
+        for(int R=0; R<s.size(); R++){
+            mp[s[R]]++;
+            if(mp.size() == R-L+1){
+                ans = max(ans, R-L+1);
+            }
+            else if(mp.size() < R-L+1){
+                mp[s[L]]--;
+                if(mp[s[L]]==0) mp.erase(s[L]);
+                L++;
+            }
+        }
+        if(ans==INT_MIN) return 0;
+        return ans;
+   }
    
-   SpicyWings;
-}
+   int main(){
+      FAST;
+      
+      string s="dvdf";
+      
+      int x = longestKSubstr(s);
+      cout << x << endl;
+      
+      SpicyWings;
+   }

@@ -1,3 +1,8 @@
+// Problem: B. Segment with Big Sum
+// URL: https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/B
+// Memory Limit: 1024 MB
+// Time Limit: 1000 ms
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -25,7 +30,7 @@ using namespace std;
 #define   py      cout<<"YES"<<endl
 #define   pn      cout<<"NO"<<endl
 
-#define   Test    ll tc; cin>>tc; f1(t,tc)
+#define   Test    ll tc; cin>>tc; cin.ignore(); f1(t,tc)
 #define   cs      cout << "Case " << t << ": ";
 
 #define   f0(i,e)   for(ll i=0; i<e; i++)
@@ -34,50 +39,28 @@ using namespace std;
 void vp(vector<ll> &v){for(auto it:v){cout << it <<" ";}}
 //=================================================================
 
-// bool cmp(pair<ll,ll>a, pair<ll,ll>b){
-   // return a.second > b.second;
-// }
-
-bool cmp(pair<int, int>a, pair<int, int>b)
-{
-   return a.second < b.second;
-}
-
 int main(){
-
-      map<int, int> m={{2,3}, {3,4},{5,2}};
-      
-      for(auto it:m){
-         cout << it.first << " " << it.second << endl;
-      }
+   FAST;
+    
+   ll n, s; cin>>n>>s;
+   vll v(n);
    
-      /*int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Max map value: " << max_mapval << endl;*/
-      
-      int max_key = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Key-Max Map Value: " << max_key << endl;
-      
-      // //This is how it works. another way.
-      // auto maxx = max_element(m.begin(), m.end(), cmp);
-      // cout << maxx->second << endl
-           // << maxx->first << endl;
-      
+   for(auto &it:v) cin>>it;
+   
+   ll L=0, R=0, sum=0, len = LLONG_MAX;
+   
+   for(R=0; R<n; R++){
+      sum += v[R];
+      while(sum-v[L] >= s){
+         sum -= v[L];
+         L++;
+      }
+      if(sum>=s){
+         len = min(len, R-L+1);
+      }
+   }
+   if(len==LLONG_MAX) cout << -1 << endl;
+   else cout << len << endl;
+   
    SpicyWings;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
