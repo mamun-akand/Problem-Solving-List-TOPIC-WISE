@@ -1,8 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+#define ll long long
+
 int main(){
-    int n; cin>>n;
+    ll n; cin>>n;
 
 //    int cnt=0, sum=0;
 //
@@ -22,9 +24,9 @@ int main(){
 
     /// Count & Sum with prime factorization : More Efficient
 
-    map <int, int> mp;
+    map <ll, ll> mp;
 
-    for(int i=2; i*i<=n; i++){
+    for(ll i=2; i*i<=n; i++){
         while(n%i==0){
             mp[i]++;
             n = n/i;
@@ -32,7 +34,7 @@ int main(){
     }
     if(n>1) mp[n]++;
 
-    int sum=1, cnt=1;
+    ll sum=1, cnt=1;
 
     for(auto it : mp){
         sum *= (pow(it.first, (it.second+1))-1)/(it.first-1);
