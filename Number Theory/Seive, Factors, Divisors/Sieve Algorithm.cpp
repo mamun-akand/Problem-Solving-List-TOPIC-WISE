@@ -23,17 +23,17 @@ int main(){
 
     ///More Efficient : O(n*(log (log n)))
 
-////    for(int i=2; i*i<=n; i++){           /// i*i
-////        if(isPrime[i]==true){
-////            for(int j=i*i; j<=n; j+=i){  /// i*i
-////                isPrime[j] = false;
-////            }
-////        }
-////    }
-////
-////    for(int i=0; i<100 ; i++){
-////        cout << isPrime[i] << " ";
-////    }
+   for(int i=2; i*i<=n; i++){           /// i*i
+       if(isPrime[i]==true){
+           for(int j=i*i; j<=n; j+=i){  /// i*i
+               isPrime[j] = false;
+           }
+       }
+   }
+
+   for(int i=0; i<100 ; i++){
+       cout << isPrime[i] << " ";
+   }
 
     return 0;
 }
