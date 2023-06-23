@@ -7,7 +7,6 @@ using namespace std;
 int main(){
    vector<int> v = {2,-10,6,8,4};
    int x = 14;
-   
    sort(v.begin(), v.end());
    
    for(int i=0; i<v.size(); i++){
@@ -22,10 +21,7 @@ int main(){
          else r--;
       }
    }
-   
    //Time Complexity: O(n^2) 
    //Space Complexity: O(1) because only l, r extra variable is used.  
-   
    return 0;
-   
 }

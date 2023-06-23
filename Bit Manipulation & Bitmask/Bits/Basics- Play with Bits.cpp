@@ -82,9 +82,5 @@ int main(){
       cout << __builtin_popcount(deci) << endl;
       cout << __builtin_popcountll((1LL<<35)-1)  << endl;
       
-      __builtin_
-      
-   
-
    SpicyWings;
 }

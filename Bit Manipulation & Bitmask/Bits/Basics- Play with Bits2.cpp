@@ -4,7 +4,6 @@ using namespace std;
 #define   ll   long long int
 #define   ln      cout<<"\n";
 
-
 //Luv to_binary
 void to_binary(int deci){
    for(int i=10; i>=0; i--){
@@ -12,7 +11,6 @@ void to_binary(int deci){
    }
    cout << endl;
 }
-
 
 int main(){
    int deci = 9;

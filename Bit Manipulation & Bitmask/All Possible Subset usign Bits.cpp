@@ -1,3 +1,5 @@
+//Subsequence or Subset
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -50,7 +52,8 @@ int main(){
       }
       ln;
    }
-   //time : O(2^n * n)
    
    SpicyWings;
 }
+
+//TC: O(2^n * n)

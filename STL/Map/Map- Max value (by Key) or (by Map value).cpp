@@ -45,7 +45,7 @@ bool cmp(pair<int, int>a, pair<int, int>b)
 
 int main(){
 
-      map<int, int> m={{2,3}, {3,4},{5,2}};
+      map<int, int> m={{5,2},{2,3}, {3,4}};
       
       for(auto it:m){
          cout << it.first << " " << it.second << endl;
@@ -54,7 +54,7 @@ int main(){
       /*int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
       cout << "Max map value: " << max_mapval << endl;*/
       
-      int max_key = max_element(m.begin(), m.end(), cmp)->second;
+      int max_key = max_element(m.begin(), m.end(),cmp)->second;
       cout << "Key-Max Map Value: " << max_key << endl;
       
       // //This is how it works. another way.

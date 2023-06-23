@@ -14,3 +14,5 @@ int main(){
     int num = 6;
     cout << fibo(num) << endl;
 }
+
+// TC: O(2^n) m is level in recursion tree. [O(2^n) Exponentian TC]
