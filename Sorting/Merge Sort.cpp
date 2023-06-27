@@ -27,6 +27,7 @@ void merge(int low, int mid, int high){
       }
       k++;
    }
+   
    for(i=i; i<lsize; i++){
       ara[k]=left[i];
       k++;
