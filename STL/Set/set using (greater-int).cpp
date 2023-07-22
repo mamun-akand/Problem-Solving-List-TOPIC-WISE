@@ -40,7 +40,7 @@ using namespace std;
 int main(){
    FAST;
     
-   set<int, greater<int>()> s{1,2,3};
+   set<int, greater<int>> s{1,2,3};
    vp(s);
    
    SpicyWings;
