@@ -15,7 +15,6 @@ using namespace std;
 
 #define   ln      cout<<"\n";
 #define   pb      push_back
-#define   rn      return 0;
 #define   py      cout<<"YES"<<endl
 #define   pn      cout<<"NO"<<endl
 
