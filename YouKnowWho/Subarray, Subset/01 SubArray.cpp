@@ -8,7 +8,7 @@ using namespace std;
 int main(){
    ll n; cin>>n;
    vll v(n); for(auto &it:v) cin>>it;
-   mamun
+
    for(ll l=0; l<n; l++){
       for(ll r=l; r<n; r++){
          //print subarray
@@ -18,6 +18,5 @@ int main(){
          cout << endl;
       }
    }
-   mamun
    
 }

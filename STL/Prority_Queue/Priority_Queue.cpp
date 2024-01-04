@@ -2,7 +2,10 @@
 using namespace std;
 
 int main(){
-    priority_queue <int> q;     //O(1) to find greatest or smallest whereas sort is O(n logn)
+   
+    //Push and Pop: O(log n)
+       
+    priority_queue <int> q;    //O(1) to find greatest or smallest whereas sort is O(n logn)
 
     q.push(8);
     q.push(25);

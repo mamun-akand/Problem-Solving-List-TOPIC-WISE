@@ -10,14 +10,16 @@ using namespace std;
 //}
 
 bool should_i_swap(pair<int,int>a, pair<int,int>b){
-
     if(a.first != b.first){
         return a.first < b.first;
     }
     else{
         return a.second > b.second;
     }
-
+   //If its arguments are equal,
+   // comparator should return false 
+   //here we can use '<' or '>', we never can use '=' or '<=' or '>='. 
+   // if using, then runtime error. Comparator follows
 }
 
 int main(){
@@ -40,3 +42,4 @@ int main(){
     }
 
 }
+ 

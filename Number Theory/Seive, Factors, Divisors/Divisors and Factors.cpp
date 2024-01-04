@@ -22,6 +22,8 @@ int main(){
 //    }
 //    cout << cnt << " " << sum << endl;
 
+    
+    
     /// Count & Sum with prime factorization : More Efficient
 
     map <ll, ll> mp;

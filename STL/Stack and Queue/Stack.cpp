@@ -2,7 +2,9 @@
 using namespace std;
 
 int main(){
-
+   
+   //iterator can't be used in stack & queue
+   
     stack <int> st;
 
     st.push(2);

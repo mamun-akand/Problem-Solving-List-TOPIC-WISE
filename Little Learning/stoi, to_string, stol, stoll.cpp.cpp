@@ -6,6 +6,12 @@ int main(){
     string i = "101010";
     int n = stoi(i);
     cout << n+1 << endl;
+    
+    long long x = stoll(i);
+    cout << x << endl;
+    
+    long y = stol(i);
+    cout << y << endl;
 
     ///Number to String
     string s1 = "Name";
