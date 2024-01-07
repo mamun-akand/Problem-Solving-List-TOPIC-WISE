@@ -3,6 +3,10 @@ using namespace std;
 
 
 int main(){
+   
+   // O(N) because after erasing all elements need to shift left
+   // O(N) because after erasing all elements need to shift left
+   // O(N) because after erasing all elements need to shift left
 
    vector <int> v = {1, 2, 3, 4, 5};
 

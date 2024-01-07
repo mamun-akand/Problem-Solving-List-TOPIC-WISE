@@ -1,13 +1,16 @@
 //Policy Based Data Structure - PBDS
+
+//Error:
+//MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ext\pb_ds\detail\resize_policy 
+//hash_standard_resize_policy_imp.hpp0000644
+
 #include<bits/stdc++.h>
+using namespace std;
 
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
-
-using namespace std;
 using namespace __gnu_pbds;
-
-typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> pbds; /* find_by_order, order_of_key *//* less<int> = asc, greater<int> = desc, less<int> = multiset */
+typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> pbds;/* find_by_order, order_of_key *//* less<int> = asc, greater<int> = desc, less_equal<int> = multiset */
 
 int main() {
 	pbds A;
@@ -26,21 +29,21 @@ int main() {
 	cout << endl << endl;
 
 	// finding kth element
-	cout << "0th: " << *A.find_by_order(0) << endl;
+	cout << "0th: " << *A.find_by_order(0) << endl;   // O(log n)
 	cout << "1st: " << *A.find_by_order(1) << endl;
 	cout << "2nd: " << *A.find_by_order(2) << endl;
 	cout << "3rd: " << *A.find_by_order(3) << endl;
 	cout << endl;
 
 	// finding no of elements strictly smaller than X value
-	cout << A.order_of_key(7) << endl;  // 2
+	cout << A.order_of_key(7) << endl;  // 2   O(log n)
 	cout << A.order_of_key(6) << endl;  // 2
 	cout << A.order_of_key(11) << endl; // 4
 	cout << A.order_of_key(1) << endl;  // 0
 	cout << endl;
 
 	// Lower Bound of X = first element >= X in the set
-	cout << *A.lower_bound(6) << endl;
+	cout << *A.lower_bound(6) << endl; 
 	cout << *A.lower_bound(2) << endl;
 	cout << endl;
 

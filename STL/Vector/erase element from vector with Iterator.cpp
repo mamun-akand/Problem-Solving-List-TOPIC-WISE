@@ -36,6 +36,10 @@ void vp(vector<ll> &v){for(auto it:v){cout << it <<" ";}}
 
 int main(){
    
+   // O(N) because after erasing all elements need to shift left
+   // O(N) because after erasing all elements need to shift left
+   // O(N) because after erasing all elements need to shift left
+   
    vll v = {1, 2, 2, 2, 3, 2, 3, 3, 3, 4};
    
    for(ll i=1; i<v.size(); i++){

@@ -10,7 +10,7 @@ using namespace std;
 #define   FAST    ios_base::sync_with_stdio(false);cin.tie(NULL);
 #define   all(v)  v.begin(),v.end()
 #define   setp(n) fixed << setprecision(n)
-// #define   endl    '\n'
+#define   endl    '\n'
 #define   debug(x)   cout << #x << " : " << x << endl;
 #define   SpicyWings return 0;
  
@@ -27,7 +27,13 @@ using namespace std;
 int main(){
    FAST;
    
-   // Test{}
+   // O(N) because after erasing all elements need to shift left
+   // O(N) because after erasing all elements need to shift left
+   // O(N) because after erasing all elements need to shift left
+   
+   vll v = {1,2,3};
+   v.erase(2); // O(N) because after erasing all elements need to shift left
+   for(auto it:v) cout << it <<' ';
    
     
    SpicyWings;
