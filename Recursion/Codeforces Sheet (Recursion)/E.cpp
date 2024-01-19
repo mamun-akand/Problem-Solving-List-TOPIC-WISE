@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/E
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +26,22 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+void rec(ll n){
+   if(n==0) return;
+   ll binary_digit = n%2;
+   ll remaining = n/2;
+   rec(remaining);
+   cout << binary_digit;
+}
+
 int main(){
    FAST;
    
-   // Test{}
+   Test{
+      ll n; cin>>n;
+      rec(n);
+      cout << endl;
+   }
    
-    
    SpicyWings;
 }

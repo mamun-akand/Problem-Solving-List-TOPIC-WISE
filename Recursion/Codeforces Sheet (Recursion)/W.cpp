@@ -1,3 +1,4 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/W
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +24,30 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+ll target;
+bool ans = false;
+
+void subSeq(ll n){
+   if(n == target){
+      ans = true; 
+   }
+   if(n > target){
+      return; 
+   }
+   subSeq(n*10);
+   subSeq(n*20);
+}
 
 int main(){
    FAST;
    
-   // Test{}
-   
+   Test{
+      ans = false;
+      cin>>target;
+      subSeq(1);
+      if(ans) py;
+      else pn;
+   }
     
    SpicyWings;
 }

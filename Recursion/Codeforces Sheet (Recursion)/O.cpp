@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/O
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +26,18 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+ll fibo(ll n){
+   if(n==1) return 0; 
+   if(n==2) return 1;
+   
+   return fibo(n-1) + fibo(n-2); 
+}
+
 int main(){
    FAST;
-   
-   // Test{}
-   
+
+   ll n; cin>>n;
+   cout << fibo(n) << endl;
     
    SpicyWings;
 }

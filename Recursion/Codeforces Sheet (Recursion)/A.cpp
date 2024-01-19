@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/A
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +26,17 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+void rec(ll n){
+   if(n==0) return;
+   cout << "I love Recursion" << endl;
+   rec(n-1);
+}
+
 int main(){
    FAST;
    
-   // Test{}
-   
+   ll n; cin>>n;
+   rec(n);
     
    SpicyWings;
 }

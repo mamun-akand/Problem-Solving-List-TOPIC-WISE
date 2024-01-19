@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/D
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +26,23 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+void rec(ll n){
+   if(n==0) return;
+   ll last_digit = n%10;
+   ll remaining = n/10;
+   rec(remaining);
+   cout << last_digit << ' ';
+}
+
 int main(){
    FAST;
    
-   // Test{}
+   Test{
+      ll n; cin>>n;
+      if(n==0) cout << 0;
+      else rec(n);
+      cout << endl;
+   }
    
-    
    SpicyWings;
 }

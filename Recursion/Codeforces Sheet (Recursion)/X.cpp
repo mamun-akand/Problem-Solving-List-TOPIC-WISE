@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/X
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +25,30 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+ll n, m;
+ll ara[12][12], Max = LLONG_MIN;
+
+void max_sum(ll i, ll j, ll sum){
+   if(i==n and j==m){
+      Max = max(Max, sum);
+      return;
+   }
+   if(j<m) max_sum(i, j+1, sum+ara[i][j+1]);
+   if(i<n) max_sum(i+1, j, sum+ara[i+1][j]);
+}
 
 int main(){
    FAST;
    
-   // Test{}
+   cin>>n>>m;
+   for(ll i=1; i<=n; i++){
+      for(ll j=1; j<=m; j++){
+         cin>>ara[i][j];
+      }
+   }
    
+   max_sum(1,1,ara[1][1]);
+   cout << Max << endl;
     
    SpicyWings;
 }

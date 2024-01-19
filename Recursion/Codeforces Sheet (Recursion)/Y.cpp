@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/Y
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +25,24 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+ll start, endd, ans=0;
+
+void possible_way(ll start, ll rem){
+   if(start == endd){
+      ans++;
+      return;
+   }
+   if(rem >= 1) possible_way(start+1, rem-1);
+   if(rem >= 2) possible_way(start+2, rem-2);
+   if(rem >= 3) possible_way(start+3, rem-3);
+}
 
 int main(){
    FAST;
    
-   // Test{}
-   
+   cin>>start>>endd;
+   possible_way(start, endd-start);
+   cout << ans << endl;
     
    SpicyWings;
 }

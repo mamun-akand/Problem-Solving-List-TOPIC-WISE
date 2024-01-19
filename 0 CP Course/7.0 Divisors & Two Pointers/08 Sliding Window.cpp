@@ -4,8 +4,8 @@ using ll = long long;
  
 int main(){
    ll n, k; cin>>n>>k;
-   ll ara[n+1]; for(ll i=1; i<=n; i++) cin>>ara[i];
-   
+   ll ara[n+1]; 
+   for(ll i=1; i<=n; i++) cin>>ara[i];
    ll sum=0, ans=0;
    for(ll i=1; i<=n; i++){
       sum += ara[i];

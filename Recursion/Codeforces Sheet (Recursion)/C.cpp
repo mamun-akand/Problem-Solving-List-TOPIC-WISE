@@ -1,3 +1,4 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/C
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +25,17 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+void rec(ll n){
+   if(n==0) return;
+   cout << n << " \n"[n==1];
+   rec(n-1);
+}
+
 int main(){
    FAST;
    
-   // Test{}
-   
+   ll n; cin>>n;
+   rec(n);
     
    SpicyWings;
 }

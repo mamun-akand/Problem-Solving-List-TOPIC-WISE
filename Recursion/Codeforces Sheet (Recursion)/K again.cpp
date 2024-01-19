@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/K
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +26,22 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+const ll N = 1009;
+ll n, ara[N];
+
+ll get_max(ll i){
+   if(i>n) return -1e9;
+   return max(ara[i], get_max(i+1));
+}
+
 int main(){
    FAST;
    
-   // Test{}
-   
+   cin>>n;
+   for(ll i=1; i<=n; i++){
+      cin >> ara[i];
+   }
+   cout << get_max(1) << endl;
     
    SpicyWings;
 }

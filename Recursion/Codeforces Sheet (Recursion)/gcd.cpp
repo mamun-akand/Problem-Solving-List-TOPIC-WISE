@@ -24,11 +24,17 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+ll rec(ll a, ll b){
+   if(b==0) return a;
+   ll rem = a%b;
+   return rec(b,rem);
+}
+
 int main(){
    FAST;
    
-   // Test{}
+   ll a = 15, b = 10;
+   cout << rec(a, b) << endl;
    
-    
    SpicyWings;
 }

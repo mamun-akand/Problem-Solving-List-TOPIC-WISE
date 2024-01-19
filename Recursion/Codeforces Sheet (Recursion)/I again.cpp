@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/I
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +25,29 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+string s; 
+
+bool is_vowel(char ch){
+   ch = tolower(ch);
+   if(ch == 'a' or ch == 'e' or ch == 'i' or ch == 'o' or ch == 'u'){
+      return true;
+   }
+   return false;
+}
+
+int count_vowel(ll i){
+   if(i == (ll)s.size()){
+      return 0;
+   }
+   ll cnt = (ll)is_vowel(s[i]);
+   return cnt + count_vowel(i+1);
+}
 
 int main(){
    FAST;
+
+   getline(cin,s);
+   cout << count_vowel(0) << endl;
    
-   // Test{}
-   
-    
    SpicyWings;
 }

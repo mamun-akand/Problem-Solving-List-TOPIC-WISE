@@ -1,3 +1,5 @@
+// https://www.spoj.com/problems/FARIDA/en/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +25,32 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+const ll N = 1e4+9;
+ll ara[N], dp[N], n;
+
+ll solve(ll n){
+   if(n<=0) return 0;
+   
+   if(dp[n] != -1){
+      return dp[n];
+   }
+   
+   ll choice1 = ara[n] + solve(n-2);
+   ll choice2 = solve(n-1);
+   return dp[n] = max(choice1, choice2);
+}
 
 int main(){
    FAST;
    
-   // Test{}
+   Test{
+      memset(dp, -1, sizeof(dp));
+      cin>>n;
+      for(ll i=1; i<=n; i++){
+         cin>>ara[i];
+      }
+      cs; cout << solve(n) << endl;
+   }
    
-    
    SpicyWings;
 }

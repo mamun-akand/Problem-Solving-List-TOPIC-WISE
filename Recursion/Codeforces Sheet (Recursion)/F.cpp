@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/F
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +25,25 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+const ll N = 1e3+9;
+ll n, ara[N];
+
+void rec(ll index){
+   if(index == n) return;
+   rec(index+1);
+   if(index%2==0){
+      cout << ara[index] << ' ';    
+   }
+}
 
 int main(){
    FAST;
    
-   // Test{}
+   cin>>n;
+   for(ll i=0; i<n; i++){
+      cin>>ara[i];
+   }
+   rec(0);
    
-    
    SpicyWings;
 }

@@ -1,3 +1,4 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/W
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +25,30 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+bool subSeq(ll n){
+   if(n == 1) return true;
+
+   if(n%10==0){
+      if(subSeq(n/10)){
+         return true;  
+      }
+   }
+   if(n%20==0){
+      if(subSeq(n/20)){
+         return true;  
+      }
+   }
+   return false;
+}
+
 int main(){
    FAST;
    
-   // Test{}
-   
+   Test{
+      ll n; cin>>n;
+      if(subSeq(n)) py;
+      else pn;
+   }
     
    SpicyWings;
 }

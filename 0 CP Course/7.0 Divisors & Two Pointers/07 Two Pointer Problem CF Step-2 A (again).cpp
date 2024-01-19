@@ -1,4 +1,5 @@
-// URL: https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/A
+// URL: https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/A/
+// longest good segment where sum at most s.
 
 #include<bits/stdc++.h>
 using namespace std;

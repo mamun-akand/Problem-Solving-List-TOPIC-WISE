@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/V
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +25,33 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+const ll N = 22;
+ll ara[N], n, total;
+bool ans = false;
+
+
+void subSeq(ll i, ll eq_sum){
+   if(i>n){
+      if(eq_sum == total){
+         ans = true;
+      }
+      return; 
+   }
+   subSeq(i+1, eq_sum+ara[i]); // +
+   subSeq(i+1, eq_sum-ara[i]); // -
+}
 
 int main(){
    FAST;
    
-   // Test{}
+   cin>>n>>total;
+   for(ll i=1; i<=n; i++){
+      cin>>ara[i];
+   }
    
+   subSeq(2, ara[1]);
+   if(ans) py;
+   else pn;
     
    SpicyWings;
 }

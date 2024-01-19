@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/P
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +26,19 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+void rec_log(ll n, ll cnt){
+   if(n==1){
+      cout << cnt << endl;
+      return;
+   }
+   rec_log(n/2, cnt+1);
+}
+
 int main(){
    FAST;
    
-   // Test{}
-   
+   ll n; cin>>n;
+   rec_log(n, 0);
     
    SpicyWings;
 }

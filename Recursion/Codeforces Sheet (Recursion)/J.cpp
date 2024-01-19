@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/J
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,11 +26,16 @@ using namespace std;
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
 
+ll fact(ll n){
+   if(n==0) return 1;
+   return n * fact(n-1);
+}
+
 int main(){
    FAST;
    
-   // Test{}
-   
+   ll n; cin>>n;
+   cout << fact(n) << endl;;
     
    SpicyWings;
 }

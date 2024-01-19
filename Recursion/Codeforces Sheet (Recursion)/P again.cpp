@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/P
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -22,13 +24,21 @@ using namespace std;
 #define   Test    ll tc; cin>>tc; cin.ignore(); for(ll t=1; t<=tc; t++)
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
-//=====================================================================
+//=========================+============================================
+
+ll rec_log(ll n){
+   if(n==1){
+      return 0;
+   }
+   ll cnt=1;
+   return cnt += rec_log(n/2);
+}
 
 int main(){
    FAST;
    
-   // Test{}
-   
+   ll n; cin>>n;
+   cout << rec_log(n) << endl;
     
    SpicyWings;
 }

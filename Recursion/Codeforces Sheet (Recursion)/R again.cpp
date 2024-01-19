@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/R
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,12 +25,29 @@ using namespace std;
 #define   cs      cout << "Case " << t << ": ";
 #define   vp(v)   for(auto it:v){cout << it <<' ';}ln;
 //=====================================================================
+const ll N = 1e5+9;
+ll ara[N];
+
+bool is_palindrome(ll l, ll r){
+   if(l >= r){
+      return true;
+   }
+   if(ara[l] != ara[r]){
+      return false;
+   }
+   return is_palindrome(l+1, r-1);
+}
 
 int main(){
    FAST;
    
-   // Test{}
+   ll n; cin>>n;
+   for(ll i=1; i<=n; i++){
+      cin>>ara[i];
+   }
    
+   if(is_palindrome(1, n)) py;
+   else pn;
     
    SpicyWings;
 }
