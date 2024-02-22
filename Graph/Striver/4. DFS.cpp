@@ -2,21 +2,23 @@
 using namespace std;
 #define vll vector<int>
 
-void dfs(int n, vll adjList[], int visit[], vll &dfs_ans){
-   visit[n] = 1;
-   dfs_ans.push_back(n);
+void dfs(int u, vll *adjList, int *visit, vll &dfs_ans){
+   //sectoin 1: actions after entering a node 
+   visit[u] = 1;
+   dfs_ans.push_back(u);
    
-   //Traverse all its neighbours
-   for(auto it : adjList[n]){
-      if(visit[it] == 0){
-         dfs(it, adjList, visit, dfs_ans);
+   for(auto v : adjList[u]){
+      // section 2: actoins before entering a new neighbour
+      if(visit[v] == 0){
+         dfs(v, adjList, visit, dfs_ans);
       }
+      // section 3: actoins after exiting a neighbour
    }
+   // section 4: actoins before exiting node u
    return;
 }
 
 int main(){
-   
    //adjList
    int node, edge; cin>>node>>edge;
    vector<int> adjList[node+1];
@@ -26,21 +28,17 @@ int main(){
       adjList[n1].push_back(n2);
       adjList[n2].push_back(n1);
    }
-   
    //DFS
-   int visit [node+1]={0};
+   int visit[node+1]={0};
    vector<int> dfs_ans;
    
    int start=1;
-   
    dfs(start, adjList, visit, dfs_ans);
-   
    
    //Print DFS
    for(auto it:dfs_ans){
       cout << it << " ";
    }
-   
 }
 
 

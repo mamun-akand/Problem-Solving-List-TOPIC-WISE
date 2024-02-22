@@ -24,7 +24,8 @@ class Solution {
                  vis[it] = 1;
                  q.push({it, node});
               }
-              else if(vis[it] == 1 && it != parent){   //already visited by other node && not also parent node.
+              else if(vis[it] == 1 && it != parent){
+              //already visited by other node && not also parent node.
                   return true;
               }             
           }

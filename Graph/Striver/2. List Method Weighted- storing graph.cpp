@@ -10,10 +10,8 @@ int main(){
    for(ll i=0; i<m; i++){
       ll u, v, weight; cin>>u>>v>>weight;
       list[u].push_back({v, weight}); 
-      list[v].push_back({u, weight});
+      list[v].push_back({u, weight}); //undirected
    }
-   
-   return 0;
 }
 
 //space: O(n*n)

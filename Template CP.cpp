@@ -29,6 +29,5 @@ int main(){
    
    // Test{}
    
-    
    SpicyWings;
 }
