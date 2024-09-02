@@ -38,7 +38,6 @@ void vp(vector<string> &v){for(auto it:v){cout << it <<endl;}}
 
 int main(){
    // string s; cin>>s;
-   
    ll n; cin>>n;
    
    vll s(n);
@@ -46,9 +45,10 @@ int main(){
       cin >> s[i];
    }
    
-   for(ll sub =0; sub <= pow(2,s.size())-1; sub++){
-      for(ll pos=0; pos < n; pos++){
+   for(ll sub = 0; sub <= pow(2,s.size())-1; sub++){
+      for(ll pos = 0; pos < n; pos++){
          if(sub & (1<<pos))  cout << s[pos] << " ";
+         else cout << 0 << " ";
       }
       ln;
    }

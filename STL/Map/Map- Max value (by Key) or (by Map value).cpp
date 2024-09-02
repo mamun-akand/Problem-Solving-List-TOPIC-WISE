@@ -51,16 +51,16 @@ int main(){
          cout << it.first << " " << it.second << endl;
       }
    
-      /*int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
-      cout << "Max map value: " << max_mapval << endl;*/
+      // int max_mapval = max_element(m.begin(), m.end(), cmp)->second;
+      // cout << "Max map value: " << max_mapval << endl;
       
-      int max_key = max_element(m.begin(), m.end(),cmp)->second;
-      cout << "Key-Max Map Value: " << max_key << endl;
-      
+      // int max_key = max_element(m.begin(), m.end(),cmp)->second;
+      // cout << "Key-Max Map Value: " << max_key << endl;
+//       
       // //This is how it works. another way.
-      // auto maxx = max_element(m.begin(), m.end(), cmp);
-      // cout << maxx->second << endl
-           // << maxx->first << endl;
+      auto maxx = max_element(m.begin(), m.end(), cmp);
+      cout << maxx->second << endl
+           << maxx->first << endl;
       
    SpicyWings;
 }

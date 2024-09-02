@@ -4,8 +4,7 @@ using namespace std;
 int main(){
     int x;
 
-    while(cin>>x){
+    while(cin>>x && x != -1){
         cout << x << endl;
-        if(cin.eof()) break;
     }
 }

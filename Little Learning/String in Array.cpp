@@ -13,7 +13,5 @@ int main()
         cout << colour[i] << endl;
     }
 
-
-
     return 0;
 }

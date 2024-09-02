@@ -7,6 +7,7 @@ int main(){
    ll ara[n+1]; 
    for(ll i=1; i<=n; i++) cin>>ara[i];
    ll sum=0, ans=0;
+   
    for(ll i=1; i<=n; i++){
       sum += ara[i];
       if(i >= k){
