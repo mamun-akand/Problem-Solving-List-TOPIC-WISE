@@ -25,11 +25,11 @@ using namespace std;
 //=====================================================================
 
 int main(){
-   // FAST;
+	FAST;
    
-   // Test{}
+	// Test{}
    
-   SpicyWings;
+	SpicyWings;
 }
 
 

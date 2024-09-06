@@ -2,6 +2,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 long long countVowels(string word) {
 	long long n = word.size(), ans = 0;
