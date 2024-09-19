@@ -9,7 +9,7 @@ ll binary_exp(ll x, ll n, ll mod){
 			ans = ans*x%mod;	
 		}
 		x = x*x%mod;
-		n = n>>2;
+		n = n>>1;
 	} return ans;
 }
 int main(){
