@@ -1,3 +1,4 @@
+// https://www.geeksforgeeks.org/find-the-maximum-possible-value-of-ai-aj-over-all-pairs-of-i-and-j/
 // Find the maximum possible value of a[i] % a[j] over all pairs of i and j
 #include<bits/stdc++.h>
 using namespace std;
